@@ -1,0 +1,272 @@
+/* General styles and layout settings */
+.tableContainer {
+  font-family: "Georgia";
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2b2b2b, #d7d7d7);
+}
+
+.tableWrapper {
+  margin-top: 5.5%;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #003366;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+  color: #d7d7d7;
+}
+
+.logoutButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logoutIcon {
+  font-size: 17px;
+  color: #d7d7d7;
+}
+
+/* Table and its content styles */
+.userTable {
+  width: 90%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.userTable th,
+.userTable td {
+  font-size: 12.5px;
+  border: 1px solid #d7d7d7;
+  text-align: left;
+  padding: 8px;
+}
+
+.userTable th {
+  font-size: 13px;
+  background-color: #003366;
+  color: #d7d7d7;
+}
+
+.userTable tr:nth-child(even) {
+  background-color: #d7d7d7;
+  color: #003366;
+}
+
+.userTable tr:nth-child(2n + 1) {
+  background-color: #e0e0e0;
+  color: #003366;
+}
+
+/* Buttons and icons styles */
+.leftSideButton {
+  cursor: pointer;
+  width: 125px;
+  height: 32.5px;
+  font-size: 12.5px;
+  margin-left: 5%;
+  background-color: #003366;
+  color: #d7d7d7;
+  font-family: "Georgia";
+}
+
+.actionIcon {
+  margin-right: 30.5%;
+}
+
+.eyeIcon,
+.pencilIcon,
+.binIcon {
+  cursor: pointer;
+}
+
+.disabledIcon {
+  opacity: 0.5;
+  /* pointer-events: none; */
+}
+
+.eyeIcon {
+  color: blue;
+}
+
+.pencilIcon {
+  color: darkblue;
+}
+
+.binIcon {
+  color: red;
+  margin-right: 0px;
+}
+
+.userPlusIcon {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.online,
+.offline {
+  width: 10.5px;
+  height: 10.5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+/* Pagination Styles */
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #d7d7d7;
+}
+
+.paginationWrapper button {
+  margin: 5px 10px;
+  padding: 1.5px 5px;
+  background-color: #003366;
+  cursor: pointer;
+}
+
+.paginationWrapper button:disabled {
+  cursor: not-allowed;
+}
+
+.paginationArrow {
+  cursor: pointer;
+  color: #d7d7d7;
+  padding: 5px;
+}
+
+.paginationArrow:disabled {
+  color: #d7d7d7;
+  background-color: #003366;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Media queries, sorted by screen size */
+@media only screen and (max-width: 1616px) {
+  .actionIcon {
+    margin-right: 20.5%;
+  }
+
+  .binIcon {
+    margin-right: 0px;
+  }
+
+  .actionIcon {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .userTable {
+    width: 95%;
+  }
+
+  .userTable th,
+  .userTable td {
+    font-size: 12px;
+    border: 1px solid #d7d7d7;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .userPlusIcon {
+    font-size: 11px;
+  }
+
+  .actionIcon {
+    margin-right: 15%;
+    font-size: 11px;
+  }
+
+  .binIcon {
+    margin-right: 0px;
+  }
+
+  .leftSideButton {
+    font-size: 13px;
+    height: 30px;
+    margin-left: 2.5%;
+  }
+
+  .online,
+  .offline {
+    width: 10.5px;
+    height: 10.5px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  .tableWrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+  }
+
+  .tableWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .tableWrapper::-webkit-scrollbar-thumb {
+    background: #003366;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .logoutIcon {
+    font-size: 14px;
+  }
+
+  .actionIcon {
+    font-size: 8px;
+  }
+
+  .userTable {
+    width: 100%;
+  }
+
+  .userTable th,
+  .userTable td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .leftSideButton {
+    font-size: 11px;
+    height: 25px;
+    margin-left: 0%;
+  }
+
+  .online,
+  .offline {
+    width: 8px;
+    height: 8px;
+  }
+}
